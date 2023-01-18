@@ -1,0 +1,19 @@
+@import "../utils/mixins";
+
+.about {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  
+    &__collapse{
+        width: 73%;
+        margin-left: 20%;
+        padding-top: 0%;
+        padding-bottom: 0%;
+        @include mobile{
+            width: 94%;
+           
+        }
+      }
+}
+

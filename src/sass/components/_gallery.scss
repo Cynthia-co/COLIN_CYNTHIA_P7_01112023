@@ -1,0 +1,29 @@
+@import '../utils/variables';
+@import "../utils/mixins";
+
+.gallery {
+   position: relative;
+   display: flex;
+   border-radius: 10px;
+   background-color: $color-background-gallery;
+   margin: 6%;
+   margin-left: 5%;
+   margin-top: 0%;
+   padding: 20px;
+   @include mobile{
+      padding: 6px;
+   }
+
+   &__thumbs {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      @include mobile{
+         flex-direction: column;
+      }
+      @include tablet{
+         flex-flow: row wrap;
+      }
+   }
+
+}

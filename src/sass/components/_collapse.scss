@@ -1,0 +1,57 @@
+@import '../utils/variables';
+@import '../utils/extensions';
+@import "../utils/mixins";
+
+.collapse {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 5px;
+    height: auto;
+    @include mobile{
+      width:90%;
+      margin: 2%;
+    }
+        &__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 10px;
+       color: $color-secondary;
+        background-color: $color-primary;
+        z-index: 0;
+        @extend %typo;
+    }
+    &__title{
+        padding: 2%;
+        padding-bottom: 1%;
+      padding-top: 1%;
+
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2%;
+      margin-top: 0;
+      padding-top: 2%;
+      padding-bottom: 2%;
+     
+      list-style: none;
+      color: $color-primary;
+      background: $color-background-gallery;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      @extend %typo;
+      line-height: 169.6%;
+    }
+    &__arrow{
+      padding-right: 2%;
+      padding-top: 1%;
+      text-align:right;
+      z-index: 100;
+      width: 3%;
+      height: 42%;
+    }
+  }
