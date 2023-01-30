@@ -1,0 +1,71 @@
+@import "../utils/extensions";
+@import "../utils/mixins";
+.banner {
+  position: relative;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  left: 5%;
+  width: 100%;
+  @include mobile{
+    height: 154px;
+  }
+  
+  &__img {
+    filter: brightness(70%);
+    height: 217px;
+    z-index: 0;
+    border-radius: 25px;
+    width: 89%;
+    height: 100%;
+    @include mobile{
+      border-radius: 10px;
+    }
+  
+  }
+  &__title {
+    position: absolute;
+    margin-left: 23%;
+    width: 70%;
+    z-index: 2;
+    @extend %typo;
+    font-size: 48px;
+    color: white;
+    @include mobile{
+      font-size:24px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 11%;
+    }
+    @include tablet{
+      margin-left: 15%;
+      // left: 19px;
+      font-size: 37px;
+    }
+    @include medium-screen{
+      margin-left: 15%;
+    }
+    @include large{
+      margin-left: 16%;
+      font-size: 68px;
+    } 
+     @include x-large{
+      font-size: 85px;
+    }  
+  }
+}
+
+.home-banner{
+  display: flex;
+  align-items: center;
+  @include mobile{
+    height: 205px;
+  }
+  
+}
+
+.about-picture{
+  @include mobile{
+      width: 94%;
+      height: 260px;
+  }
+}

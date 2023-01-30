@@ -1,0 +1,53 @@
+@import "../utils/variables";
+@import "../utils/extensions";
+@import "../utils/mixins";
+
+.inline {
+  display: inline-block;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $color-primary;
+  margin: 2%;
+  @extend %typo;
+  font-size: 288px;
+  @include mobile{
+    font-size: 216px;
+  }
+
+  &__code {
+    margin: 0;
+    flex-direction: column;
+    font-size: 327px;
+    text-align: center;
+    line-height: 100%;
+    @include mobile{
+      font-size: 129px;
+    }
+    
+  }
+  &__com {
+    margin-bottom: 7%;
+    color: $color-primary;
+    @extend %typo;
+    font-size: 39px;
+    align-self: center;
+    text-align: center;
+    @include mobile{
+      font-size: 19px;
+    }
+  }
+
+  &__link {
+    color: $color-primary;
+    @extend %typo;
+    font-size: 18px;
+    align-self: center;
+    @include mobile{
+      padding-top: 15%;
+    }
+  }
+}

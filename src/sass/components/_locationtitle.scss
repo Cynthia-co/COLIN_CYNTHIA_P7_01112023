@@ -1,0 +1,41 @@
+@import '../utils/variables';
+@import '../utils/extensions';
+@import "../utils/mixins";
+
+.logement-header{
+  display: flex;
+  position: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  color: $color-primary;
+  @extend %typo;
+  @include mobile{
+    flex-direction: column;
+  }
+  &__left{
+    left: 0;
+    padding-left: 2%;
+    flex-direction: column;
+    
+  }
+  &__right{
+    display: flex;
+    right: 0;
+    padding-right: 2%;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include mobile{
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.title{
+  font-size: 36px;
+  margin-bottom: 2%;
+  margin-top: 4%;
+  line-height: normal;
+}

@@ -1,0 +1,50 @@
+@import "../utils/variables";
+@import '../utils/extensions';
+@import "../utils/mixins";
+.nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  @extend %typo;
+  left: 65%;
+  bottom: 25%;
+  width: 309px;
+   @include x-large{
+    left: 79%;
+  }
+  @include large{
+    left: 72%;
+  }
+  @include tablet{
+    width: 40%;
+    text-transform : uppercase;
+    left: 48%;
+    justify-content: flex-end;
+  }
+  @include mobile{
+    width: 40%;
+    text-transform : uppercase;
+    justify-content: flex-end;
+  }
+  
+  &__item{
+  color: $color-primary;
+  padding: 2%;
+  
+  text-decoration: none;
+  @include mobile{
+    margin-left: 0;
+    left: 0;
+  }
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+}
+
+.active{
+  text-decoration: underline;
+  color: $color-primary;
+  padding: 1%;
+}
